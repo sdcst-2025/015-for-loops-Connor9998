@@ -22,3 +22,8 @@ enter a number:4
 ****
 
 """
+
+width=input("width of box less than 10:")
+height=input("input the height of box less than 10:")
+
+

@@ -23,3 +23,24 @@ Enter total payments for month(2)  : 75
 Your closing balance is $51.51
 
 """
+balance=input("Your current balance?:")
+#convert to a number
+balance=float(balance)
+debt=input("How much have you spent?:")
+#convert to a number
+debt=float(debt)
+payedoff=input("How much of that have you payed off?:")
+#convert to a number
+payedoff=float(payedoff)
+
+total=balance + debt-payedoff
+#convert to a number
+total= float(total)
+
+if total>0:
+    print(f"your closing balance is {total}*1.02")
+
+else:
+    print("Your total is 0.00")
+
+
