@@ -23,7 +23,13 @@ enter a number:4
 
 """
 
-width=input("width of box less than 10:")
-height=input("input the height of box less than 10:")
+width=int(input("width of box less than 10:"))
+height=int(input("input the height of box less than 10:"))
 
+for i in range(height):
+   for p in range(width):
+     print("*",end="")
+print()
+     
+    
 
