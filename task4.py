@@ -23,24 +23,29 @@ Enter total payments for month(2)  : 75
 Your closing balance is $51.51
 
 """
-balance=input("Your current balance?:")
-#convert to a number
-balance=float(balance)
-debt=input("How much have you spent?:")
-#convert to a number
-debt=float(debt)
-payedoff=input("How much of that have you payed off?:")
-#convert to a number
-payedoff=float(payedoff)
+balance = 0
 
-total=balance + debt-payedoff
-#convert to a number
-total= float(total)
+month = int(input("Number of months to track?: "))
 
-if total>0:
-    print(f"your closing balance is {total}*1.02")
+for i in range(1, month + 1):
+    
+    purchases = float(input(f"Enter total purchases for the month({i}): "))
+    payments = float(input(f"Enter total amount of  payments made during this month({i}): "))
+    
+    balance = balance + (purchases - payments)
+    
+    
+    if balance > 0:
+        interest = balance * 0.02
+    
+    else:
+        interest = 0
 
-else:
-    print("Your total is 0.00")
+    balance = balance + interest
+    
+    print(f"2% interest has been charged: {interest:.2f}")
+    print(f"Your closing balance for month({i}) is ${balance:.2f}")
+
+print(f"Total balance at the end of {month} months, your final balance is ${balance:.2f}")
 
 
