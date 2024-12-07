@@ -37,3 +37,13 @@ example:
 Enter a number: -4
 Invalid input
 """
+
+number = int(input("Enter a number: "))
+        
+if number < 0:
+    print("Invalid input")
+else:
+    factorial = 1
+for i in range(1, number + 1):
+    factorial *= i
+    print(f"{number}! is {factorial}")
