@@ -10,3 +10,4 @@ else:
 
 for i in range(1, 12):
   print(i*4)
+  print("finished")
