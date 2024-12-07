@@ -43,23 +43,26 @@ t=round(t,2)
 subtotal=q+w+e+r+t
 #convert to a number
 subtotal=float(subtotal)
-subtotal=f"{subtotal,2f}
-
-print(f"your subtotal is {subtotal}")
 
 gst= subtotal*0.05
 #convert to a number
-gst=f"{gst,2f}"
-print(f"Your Gst is {gst}")
+gst=float(gst)
 
 pst= subtotal*0.07
 #convert to a number
-pst=f"{pst,2f}"
+pst= float(pst)
 
-print(f"your Pst is {pst}")
 
 total= subtotal+ gst+ pst
 #convert to a number
 total=float(total)
-tot=f"{total,2f}"
-print(f"your total is {total}")
+
+
+gst = round(subtotal * 0.05, 2)
+pst = round(subtotal * 0.07, 2)
+total = round(subtotal + gst + pst, 2)
+
+print(f"The subtotal:{subtotal:.2f}")
+print(f"GST at 5%: {gst:.2f}")
+print(f"PST at 7%: {pst:.2f}")
+print(f"Total: {total:.2f}")
